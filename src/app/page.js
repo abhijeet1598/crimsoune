@@ -19,7 +19,9 @@ export default function Home() {
         {/* Hero Section */}
         <section className="relative bg-[url('/hero.png')] bg-cover bg-center h-screen flex flex-col items-center justify-center text-center text-white">
           <h1 className="text-6xl font-bold mb-4">Crimsoune</h1>
-          <p className="text-xl mb-6">Nature's Purest Saffron & Floral Gifts</p>
+          <p className="text-xl mb-6">
+            Nature&apos;s Purest Saffron & Floral Gifts
+          </p>
           <Link
             href="/contact-us"
             className="px-6 py-3 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition"
@@ -34,9 +36,9 @@ export default function Home() {
             <h2 className="text-3xl font-semibold mb-4">About Crimsoune</h2>
             <p className="text-lg text-gray-600">
               At Crimsoune, we are dedicated to bringing you the finest saffron
-              and the beauty of nature’s blossoms. Grown with care and harvested
-              with precision, our saffron and flowers are the epitome of purity
-              and natural goodness.
+              and the beauty of nature&apos;s blossoms. Grown with care and
+              harvested with precision, our saffron and flowers are the epitome
+              of purity and natural goodness.
             </p>
           </div>
         </section>
@@ -135,7 +137,7 @@ export default function Home() {
               {/* Pure Saffron */}
               <div className="bg-green-100 rounded-lg shadow-lg p-6">
                 <h3 className="text-2xl font-semibold mb-4">
-                  Pure Saffron: Nature’s Golden Spice
+                  Pure Saffron: Nature&apos;s Golden Spice
                 </h3>
                 <ul className="text-gray-700 space-y-6">
                   <li>
@@ -202,9 +204,9 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-lg mb-8">
-              Have questions about our saffron, seeds, or flowers? We’re here to
-              help! Reach out to us with any inquiries, and let us bring the
-              essence of nature to you.
+              Have questions about our saffron, seeds, or flowers? We&apos;re
+              here to help! Reach out to us with any inquiries, and let us bring
+              the essence of nature to you.
             </p>
             <Link
               href="/contact-us"
