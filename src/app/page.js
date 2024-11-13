@@ -1,101 +1,235 @@
+import Navbar from "@/components/Navbar/Navbar";
+import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <>
+      <Head>
+        <title>Crimsoune - Pure Saffron and Floral Delights</title>
+        <meta
+          name="description"
+          content="Crimsoune - Your source for pure saffron, saffron seeds, and flowers."
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      <main className="bg-white text-gray-800">
+        {/* Hero Section */}
+        <section className="relative bg-[url('/hero.png')] bg-cover bg-center h-screen flex flex-col items-center justify-center text-center text-white">
+          <h1 className="text-6xl font-bold mb-4">Crimsoune</h1>
+          <p className="text-xl mb-6">Nature's Purest Saffron & Floral Gifts</p>
+          <Link
+            href="/contact-us"
+            className="px-6 py-3 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+            Get it now
+          </Link>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-16 px-8 bg-green-100">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-semibold mb-4">About Crimsoune</h2>
+            <p className="text-lg text-gray-600">
+              At Crimsoune, we are dedicated to bringing you the finest saffron
+              and the beauty of nature’s blossoms. Grown with care and harvested
+              with precision, our saffron and flowers are the epitome of purity
+              and natural goodness.
+            </p>
+          </div>
+        </section>
+
+        {/* Product Highlights */}
+        <section id="products" className="py-16 px-8">
+          <h2 className="text-5xl font-semibold mb-12 text-center">
+            What We Offer
+          </h2>
+          <div className="max-w-6xl mx-auto grid gap-8 grid-cols-1 md:grid-cols-3">
+            {/* Saffron Card */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/saffron.webp"
+                  alt="Saffron"
+                  layout="fill"
+                  className="object-cover"
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Pure Saffron</h3>
+                <p className="text-gray-600 mb-4">
+                  Our saffron is handpicked to ensure the finest quality,
+                  bringing you the pure essence of nature.
+                </p>
+                <a
+                  href="/shop/saffron"
+                  className="text-yellow-600 hover:underline"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            {/* Saffron Seeds Card */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/saffron-seeds.webp"
+                  alt="Saffron seeds"
+                  layout="fill"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Saffron Seeds</h3>
+                <p className="text-gray-600 mb-4">
+                  Grow your own saffron with our carefully selected saffron
+                  seeds, perfect for cultivation.
+                </p>
+                <a
+                  href="/shop/seeds"
+                  className="text-yellow-600 hover:underline"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+
+            {/* Flowers Card */}
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="relative w-full h-56">
+                <Image
+                  src="/saffron-flowers.png"
+                  alt="Saffron flowers"
+                  layout="fill"
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-2">Natural Flowers</h3>
+                <p className="text-gray-600 mb-4">
+                  Our flowers bring beauty and freshness, perfect for any
+                  occasion or decoration.
+                </p>
+                <a
+                  href="/shop/flowers"
+                  className="text-yellow-600 hover:underline"
+                >
+                  Learn More
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Educational Section */}
+        <section id="benefits" className="py-16 px-8 bg-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-5xl font-semibold mb-12 text-center">
+              Discover the Benefits of Saffron
+            </h2>
+            <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
+              {/* Pure Saffron */}
+              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Pure Saffron: Nature’s Golden Spice
+                </h3>
+                <ul className="text-gray-700 space-y-6">
+                  <li>
+                    <strong>Premium Quality:</strong> Handpicked for intense
+                    flavor and aroma.
+                  </li>
+                  <li>
+                    <strong>Health Benefits:</strong> Supports mental health,
+                    boosts mood, and promotes eye and heart health.
+                  </li>
+                  <li>
+                    <strong>Uses:</strong> Perfect for enhancing rice, desserts,
+                    and teas with a rich golden hue and aroma.
+                  </li>
+                </ul>
+              </div>
+
+              {/* Saffron Seeds */}
+              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Saffron Seeds: Grow Your Own Golden Harvest
+                </h3>
+                <ul className="text-gray-700 space-y-6">
+                  <li>
+                    <strong>Grow Your Own Saffron:</strong> Cultivate saffron at
+                    home with our high-quality seeds.
+                  </li>
+                  <li>
+                    <strong>Benefits of Cultivation:</strong> A rewarding
+                    experience and fresh spice from your garden.
+                  </li>
+                  <li>
+                    <strong>Cultivation Tips:</strong> Requires sunlight,
+                    well-drained soil, and moderate watering.
+                  </li>
+                </ul>
+              </div>
+
+              {/* Natural Flowers */}
+              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+                <h3 className="text-2xl font-semibold mb-4">
+                  Natural Flowers: Enhance Every Space with Beauty
+                </h3>
+                <ul className="text-gray-700 space-y-6">
+                  <li>
+                    <strong>Beauty & Freshness:</strong> Add natural elegance
+                    and fragrance to any room.
+                  </li>
+                  <li>
+                    <strong>Perfect for Any Occasion:</strong> Great for
+                    decoration or gifting, bringing positivity to any space.
+                  </li>
+                  <li>
+                    <strong>Caring for Flowers:</strong> Change water, trim
+                    stems, and keep in indirect sunlight.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16 px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-semibold mb-4">Get in Touch</h2>
+            <p className="text-lg mb-8">
+              Have questions about our saffron, seeds, or flowers? We’re here to
+              help! Reach out to us with any inquiries, and let us bring the
+              essence of nature to you.
+            </p>
+            <Link
+              href="/contact-us"
+              className="inline-block bg-yellow-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="bg-gray-800 text-white py-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <p>&copy; 2024 Crimsoune. All rights reserved.</p>
+            <div className="flex justify-center space-x-4 mt-4">
+              <a href="#" className="hover:text-yellow-600">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-yellow-600">
+                Terms of Service
+              </a>
+            </div>
+          </div>
+        </footer>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
