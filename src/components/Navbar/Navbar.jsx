@@ -13,7 +13,7 @@ export default function Navbar() {
     });
   }, []);
   return (
-    <header className="text-green-600 text-lg shadow-lg">
+    <header className="text-primary text-lg shadow-lg">
       <div className="container mx-auto px-6 py-6 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold">

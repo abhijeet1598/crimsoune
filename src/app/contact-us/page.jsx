@@ -19,14 +19,14 @@ export default function ContactUs() {
         />
       </Head>
 
-      <main className="bg-green-100 text-gray-800 min-h-screen flex items-center justify-center">
+      <main className="bg-purple-200 text-primary min-h-screen flex items-center justify-center">
         {!isFormSubmitted && (
           <section className="bg-white w-full max-w-4xl p-8 rounded-lg shadow-lg sm:flex sm:items-center sm:gap-10">
             <div>
-              <h1 className="text-3xl font-semibold text-center mb-6 text-green-700">
+              <h1 className="text-3xl font-semibold text-center mb-6">
                 Contact Us
               </h1>
-              <p className="text-center text-gray-600 mb-8">
+              <p className="text-center mb-8">
                 We’d love to hear from you! Fill out the form below, and we’ll
                 get back to you as soon as possible.
               </p>
@@ -34,17 +34,14 @@ export default function ContactUs() {
             <form onSubmit={handleSubmit} className="w-full space-y-6">
               {/* Name Input */}
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="name" className="block text-sm font-medium">
                   Name
                 </label>
                 <input
                   type="text"
                   id="name"
                   name="name"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Your full name"
                   required
                 />
@@ -52,17 +49,14 @@ export default function ContactUs() {
 
               {/* Email Input */}
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="email" className="block text-sm font-medium">
                   Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="you@example.com"
                   required
                 />
@@ -70,17 +64,14 @@ export default function ContactUs() {
 
               {/* Phone Number Input */}
               <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700"
-                >
+                <label htmlFor="phone" className="block text-sm font-medium">
                   Phone Number
                 </label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Your phone number"
                 />
               </div>
@@ -89,7 +80,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="description"
-                  className="block text-sm font-medium text-gray-700"
+                  className="block text-sm font-medium"
                 >
                   Description of Requirement
                 </label>
@@ -97,7 +88,7 @@ export default function ContactUs() {
                   id="description"
                   name="description"
                   rows="4"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-secondary"
                   placeholder="Tell us more about your needs"
                   required
                 />
@@ -107,7 +98,7 @@ export default function ContactUs() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white py-2 px-4 rounded-md font-semibold hover:bg-green-700 transition focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full bg-primary text-white py-2 px-4 rounded-md font-semibold hover:bg-secondary hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-green-500"
                 >
                   Submit
                 </button>
@@ -116,11 +107,11 @@ export default function ContactUs() {
           </section>
         )}
         {isFormSubmitted && (
-          <section className="max-w-4xl px-6">
-            <h2 className="text-3xl font-semibold text-center mb-6 text-green-700">
-              Thank you for submitting your interest at Prakrti.
+          <section className="max-w-4xl px-6 text-primary">
+            <h2 className="text-3xl font-semibold text-center mb-6">
+              Thank you for submitting your interest at Crimsoune.
             </h2>
-            <h2 className="text-3xl font-semibold text-center mb-6 text-green-700">
+            <h2 className="text-3xl font-semibold text-center mb-6">
               Our team will get back to you within next 24-48 hours.
             </h2>
           </section>

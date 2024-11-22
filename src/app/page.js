@@ -15,26 +15,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white text-gray-800">
+      <main>
         {/* Hero Section */}
-        <section className="relative bg-[url('/hero.png')] bg-cover bg-center h-screen flex flex-col items-center justify-center text-center text-white">
+        <section className="relative bg-[url('/saffron-banner.jpg')] bg-cover bg-center h-[30rem] flex flex-col items-center justify-center text-center text-white">
           <h1 className="text-6xl font-bold mb-4">Crimsoune</h1>
           <p className="text-xl mb-6">
             Nature&apos;s Purest Saffron & Floral Gifts
           </p>
           <Link
             href="/contact-us"
-            className="px-6 py-3 bg-yellow-500 text-white rounded-full hover:bg-yellow-600 transition"
+            className="px-6 py-3 bg-customYellow text-primary rounded-full hover:bg-yellow-600 transition"
           >
             Get it now
           </Link>
         </section>
 
         {/* About Section */}
-        <section id="about" className="py-16 px-8 bg-green-100">
+        <section id="about" className="py-16 px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-semibold mb-4">About Crimsoune</h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-primary">
               At Crimsoune, we are dedicated to bringing you the finest saffron
               and the beauty of nature&apos;s blossoms. Grown with care and
               harvested with precision, our saffron and flowers are the epitome
@@ -44,7 +44,7 @@ export default function Home() {
         </section>
 
         {/* Product Highlights */}
-        <section id="products" className="py-16 px-8">
+        <section id="products" className="py-16 px-8 bg-purple-200">
           <h2 className="text-5xl font-semibold mb-12 text-center">
             What We Offer
           </h2>
@@ -53,7 +53,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-56">
                 <Image
-                  src="/saffron.webp"
+                  src="/saffron.jpg"
                   alt="Saffron"
                   layout="fill"
                   className="object-cover"
@@ -79,7 +79,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-56">
                 <Image
-                  src="/saffron-seeds.webp"
+                  src="/saffron-seeds.jpg"
                   alt="Saffron seeds"
                   layout="fill"
                   className="object-cover"
@@ -104,7 +104,7 @@ export default function Home() {
             <div className="bg-white rounded-lg shadow-lg overflow-hidden">
               <div className="relative w-full h-56">
                 <Image
-                  src="/saffron-flowers.png"
+                  src="/saffron-flowers.jpg"
                   alt="Saffron flowers"
                   layout="fill"
                   className="object-cover"
@@ -128,18 +128,21 @@ export default function Home() {
         </section>
 
         {/* Educational Section */}
-        <section id="benefits" className="py-16 px-8 bg-white">
+        <section
+          id="benefits"
+          className="py-16 px-8 bg-purple-200 text-primary"
+        >
           <div className="max-w-6xl mx-auto">
             <h2 className="text-5xl font-semibold mb-12 text-center">
               Discover the Benefits of Saffron
             </h2>
             <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
               {/* Pure Saffron */}
-              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-2xl font-semibold mb-4">
                   Pure Saffron: Nature&apos;s Golden Spice
                 </h3>
-                <ul className="text-gray-700 space-y-6">
+                <ul className="space-y-6">
                   <li>
                     <strong>Premium Quality:</strong> Handpicked for intense
                     flavor and aroma.
@@ -156,11 +159,11 @@ export default function Home() {
               </div>
 
               {/* Saffron Seeds */}
-              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-2xl font-semibold mb-4">
                   Saffron Seeds: Grow Your Own Golden Harvest
                 </h3>
-                <ul className="text-gray-700 space-y-6">
+                <ul className="space-y-6">
                   <li>
                     <strong>Grow Your Own Saffron:</strong> Cultivate saffron at
                     home with our high-quality seeds.
@@ -177,11 +180,11 @@ export default function Home() {
               </div>
 
               {/* Natural Flowers */}
-              <div className="bg-green-100 rounded-lg shadow-lg p-6">
+              <div className="bg-white rounded-lg shadow-lg p-6">
                 <h3 className="text-2xl font-semibold mb-4">
                   Natural Flowers: Enhance Every Space with Beauty
                 </h3>
-                <ul className="text-gray-700 space-y-6">
+                <ul className="space-y-6">
                   <li>
                     <strong>Beauty & Freshness:</strong> Add natural elegance
                     and fragrance to any room.
@@ -200,7 +203,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gradient-to-r from-green-600 to-green-800 text-white py-16 px-8">
+        <section className="bg-secondary text-white py-16 px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-lg mb-8">
@@ -210,7 +213,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact-us"
-              className="inline-block bg-yellow-500 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
+              className="inline-block bg-customYellow text-primary font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-yellow-600 transition duration-300"
             >
               Contact Us
             </Link>
@@ -218,7 +221,7 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="bg-gray-800 text-white py-6">
+        <footer className="bg-light text-primary py-6">
           <div className="max-w-4xl mx-auto text-center">
             <p>&copy; 2024 Crimsoune. All rights reserved.</p>
             <div className="flex justify-center space-x-4 mt-4">
