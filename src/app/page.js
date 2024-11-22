@@ -17,7 +17,10 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-        <section className="relative bg-[url('/saffron-banner.jpg')] bg-cover bg-center h-[30rem] flex flex-col items-center justify-center text-center text-white">
+        <section
+          id="banner"
+          className="relative bg-[url('/saffron-banner.jpg')] bg-cover bg-center h-[30rem] flex flex-col items-center justify-center text-center text-white"
+        >
           <h1 className="text-6xl font-bold mb-4">Crimsoune</h1>
           <p className="text-xl mb-6">
             Nature&apos;s Purest Saffron & Floral Gifts

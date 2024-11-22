@@ -52,17 +52,11 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div id="mobile-menu" className="hidden md:hidden bg-green-600">
-        <Link
-          href="/about"
-          className="block px-4 py-2 text-white hover:bg-green-700"
-        >
+      <div id="mobile-menu" className="hidden md:hidden">
+        <Link href="/about" className="block px-4 py-2 text-primary">
           About
         </Link>
-        <Link
-          href="/contact-us"
-          className="block px-4 py-2 text-white hover:bg-green-700"
-        >
+        <Link href="/contact-us" className="block px-4 py-2 text-primary">
           Contact Us
         </Link>
       </div>

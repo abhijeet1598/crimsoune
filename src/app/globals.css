@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @media (max-width: 480px) {
+  #banner {
+    position: relative;
+  }
+
+  #mobile-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+} */
