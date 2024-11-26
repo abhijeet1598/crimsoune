@@ -19,9 +19,9 @@ export default function ContactUs() {
         />
       </Head>
 
-      <main className="bg-purple-200 text-primary min-h-screen flex items-center justify-center">
+      <main className="bg-[url('/pattern-bg.jpg')] bg-cover bg-center text-primary min-h-screen flex items-center justify-center">
         {!isFormSubmitted && (
-          <section className="bg-white w-full max-w-4xl p-8 rounded-lg shadow-lg sm:flex sm:items-center sm:gap-10">
+          <section className="sm:bg-white w-full max-w-4xl p-8 rounded-lg shadow-lg sm:flex sm:items-center sm:gap-10">
             <div>
               <h1 className="text-3xl font-semibold text-center mb-6">
                 Contact Us
@@ -34,7 +34,10 @@ export default function ContactUs() {
             <form onSubmit={handleSubmit} className="w-full space-y-6">
               {/* Name Input */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -49,7 +52,10 @@ export default function ContactUs() {
 
               {/* Email Input */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -64,7 +70,10 @@ export default function ContactUs() {
 
               {/* Phone Number Input */}
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium mb-1"
+                >
                   Phone Number
                 </label>
                 <input
@@ -80,7 +89,7 @@ export default function ContactUs() {
               <div>
                 <label
                   htmlFor="description"
-                  className="block text-sm font-medium"
+                  className="block text-sm font-medium mb-1"
                 >
                   Description of Requirement
                 </label>

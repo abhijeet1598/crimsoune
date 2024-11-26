@@ -1,22 +1,18 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
-  useEffect(() => {
-    const menuButton = document.getElementById("mobile-menu-button");
-    const mobileMenu = document.getElementById("mobile-menu");
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-    menuButton.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }, []);
   return (
-    <header className="text-primary text-lg shadow-lg">
-      <div className="container mx-auto px-6 py-6 flex justify-between items-center">
+    <header className="text-primary text-lg shadow-lg relative">
+      <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold">
+        <Link href="/" className="text-2xl font-bold flex items-center gap-2">
+          <Image src="/logo.png" width={50} height={50} alt="crimsoune logo" />
           Crimsoune
         </Link>
 
@@ -32,7 +28,11 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button id="mobile-menu-button" className="focus:outline-none">
+          <button
+            id="mobile-menu-button"
+            className="focus:outline-none"
+            onClick={() => setShowMobileMenu((prev) => !prev)}
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -52,14 +52,20 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div id="mobile-menu" className="hidden md:hidden">
-        <Link href="/about" className="block px-4 py-2 text-primary">
-          About
-        </Link>
-        <Link href="/contact-us" className="block px-4 py-2 text-primary">
-          Contact Us
-        </Link>
-      </div>
+      {showMobileMenu && (
+        <div
+          id="mobile-menu"
+          className="md:hidden absolute left-0 w-full bg-white shadow-lg z-50"
+          onClick={() => setShowMobileMenu(false)}
+        >
+          <Link href="/about" className="block px-4 py-2 text-primary">
+            About
+          </Link>
+          <Link href="/contact-us" className="block px-4 py-2 text-primary">
+            Contact Us
+          </Link>
+        </div>
+      )}
     </header>
   );
 }
