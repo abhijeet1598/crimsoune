@@ -2,14 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @media (max-width: 480px) {
-  #banner {
-    position: relative;
-  }
-
-  #mobile-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-} */
+body {
+  @apply font-montserrat;
+}

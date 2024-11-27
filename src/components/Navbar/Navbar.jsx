@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <header className="text-primary text-lg shadow-lg relative">
-      <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+      <div className="container px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold flex items-center gap-2">
           <Image src="/logo.png" width={50} height={50} alt="crimsoune logo" />
