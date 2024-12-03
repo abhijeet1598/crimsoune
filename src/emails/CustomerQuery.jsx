@@ -47,10 +47,10 @@ const InquiryEmail = ({
     <div style={styles.container}>
       <div style={styles.header}>New Customer Inquiry</div>
       <div style={styles.content}>
-        <p>
+        {/* <p>
           <span style={styles.label}>Received By:</span>{" "}
           <span style={styles.value}>{username}</span>
-        </p>
+        </p> */}
         <p>
           <span style={styles.label}>Customer Name:</span>{" "}
           <span style={styles.value}>{customerName}</span>

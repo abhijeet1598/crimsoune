@@ -144,7 +144,7 @@ export default function ContactUs() {
               <div className="text-center">
                 <button
                   type="submit"
-                  className="w-full bg-primary text-white py-2 px-4 rounded-md font-semibold hover:bg-customPurple hover:text-customViolet transition focus:outline-none focus:ring-2 focus:ring-green-500"
+                  className="w-full bg-primary text-white py-2 px-4 rounded-md font-semibold hover:bg-customPurple hover:text-customViolet transition focus:outline-none focus:ring-2 focus:ring-customPurple"
                 >
                   Submit
                 </button>
