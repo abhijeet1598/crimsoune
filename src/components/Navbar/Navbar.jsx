@@ -8,7 +8,7 @@ export default function Navbar() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   return (
-    <header className="text-primary text-lg shadow-lg relative">
+    <header className="text-customViolet text-lg shadow-lg relative">
       <div className="container px-4 sm:px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold flex items-center gap-2">
@@ -58,10 +58,13 @@ export default function Navbar() {
           className="md:hidden absolute left-0 w-full bg-white shadow-lg z-50"
           onClick={() => setShowMobileMenu(false)}
         >
-          <Link href="/about" className="block px-4 py-2 text-primary">
+          <Link href="/about" className="block px-4 py-2 text-customViolet">
             About
           </Link>
-          <Link href="/contact-us" className="block px-4 py-2 text-primary">
+          <Link
+            href="/contact-us"
+            className="block px-4 py-2 text-customViolet"
+          >
             Contact Us
           </Link>
         </div>

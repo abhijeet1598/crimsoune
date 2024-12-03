@@ -23,7 +23,7 @@ const Hero = () => {
      </p> */}
         <Link
           href="/contact-us"
-          className="px-6 py-3 bg-customYellow text-primary rounded-full hover:bg-yellow-600 transition font-semibold"
+          className="px-6 py-3 bg-customYellow text-customViolet rounded-full hover:bg-yellow-600 transition font-semibold"
         >
           Get it now
         </Link>

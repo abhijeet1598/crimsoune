@@ -4,7 +4,7 @@ const Educational = () => {
   return (
     <section
       id="benefits"
-      className="py-16 px-8 bg-purple-200 text-primary bg-[url('/pattern-bg.jpg')] bg-cover bg-center"
+      className="py-16 px-8 bg-purple-200 text-customViolet bg-[url('/pattern-bg.jpg')] bg-cover bg-center"
     >
       <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-semibold mb-12 text-center">
